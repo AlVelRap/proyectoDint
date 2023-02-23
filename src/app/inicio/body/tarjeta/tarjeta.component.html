@@ -1,0 +1,28 @@
+<div class="container-fluid tarjeta my-3 p-0" [style.background-color]=bg [style.color]=color>
+  <div class="row">
+    <div *ngIf="pos == 'izquierda'" class="col-12">
+      <div class="tarjeta-body">
+        <h5 class="tarjeta-title text-center">{{ titulo }}</h5>
+        <p class="tarjeta-text text-center">{{ body }}</p>
+        <div class="text-center">
+          <button class="btn btn-primary" routerLink="bodas">Ir</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <picture>
+        <source class="img-fluid" media="(max-width:1200px)" srcset="https://via.placeholder.com/387x269?text=Imagen+{{titulo}}">
+        <img src="{{ imagen }}" class="img-fluid" alt="{{titulo}}" />
+      </picture>
+    </div>
+    <div *ngIf="pos == 'derecha'" class="col-12">
+      <div class="tarjeta-body">
+        <h5 class="tarjeta-title text-center">{{ titulo }}</h5>
+        <p class="tarjeta-text text-center">{{ body }}</p>
+        <div class="text-center">
+          <button class="btn btn-primary" routerLink="bodas">Ir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
